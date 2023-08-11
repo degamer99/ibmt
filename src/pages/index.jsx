@@ -1,16 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import logo from "../img/logo.png"
-import responsive from "../img/resposive.jpg"
-import professional from'../img/professional.jpg'
-import heroBg from '../img/hero-bg.jpg'
-import plumber from '../img/plumber.png'
-// import styles from '@/styles/Home.module.css'
-import styles from '@/styles/home.module.sass'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import logo from "../img/logo.png";
+import icon from "../img/icon.jpg";
+import icon1 from "../img/icon1.jpg";
+import responsive from "../img/resposive.jpg";
+import professional from "../img/professional.jpg";
+import heroBg from "../img/hero-bg.jpg";
+import plumpipe from "../img/plumpipe.jpg";
+import plumber from "../img/plumber.png";
+import { FaBars, FaQuoteLeft, FaQuoteRight, FaWhatsappSquare } from "react-icons/fa"
+ // import styles from '@/styles/Home.module.css'
+import styles from "@/styles/home.module.sass";
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -21,108 +24,202 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={styles.main}>
         <header className={styles.header}>
-          <Image
-            src={logo}
-            width={100}
-            height={50}
-            alt="IBMT logo"
-          />
-          <nav>
+          <Image src={logo} width={60} height={30} alt="IBMT logo" />
+          <FaBars  style={{ transform: "scale(1.65)"}}/>
+          {/* <nav>
             <a href="">Home</a>
             <a href="">About Us</a>
             <a href="">Services</a>
             <a href="">Products</a>
             <a href="">Contact Us</a>
-          </nav>
+          </nav> */}
         </header>
-        <section className={styles.hero}
-        style={{ background: "url('/hero-bg.jpg')", backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 100%" , lineHeight: "5rem"}}>
-          <div>
-
-          </div>
-          <div>
-          <Image
-            src={plumber}
-            width={100}
-            height={200}
-            alt="IBMT logo"
-          />
+        <section
+          className={styles.hero}
+          style={{
+            background: "url('/heroTap.jpg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% 100%",
+            lineHeight: "5rem",
+            minHeight: "30vh"
+          }}
+        >
+          <div id={styles.linear}></div>
+          <div id={styles.heroInfo}>
+            <h2>Plumbing Services</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. consectetur eos eius?</p>
+            <ul>
+              <li>Drain Clearing</li>
+              <li>Pipe Leakage</li>
+              <li>Sewer Clearage</li>
+            </ul>
+            <button> Contact Us</button>
           </div>
         </section>
-        <section className={styles.who}>
-          <h3>Who We Are</h3>
+        <section className={styles.whatsapp}>
+          <div>
+            <h3>Reach Out To Us</h3>
+            <p>Contact us on whatsapp</p>
+          </div>
+          <div>
+            <FaWhatsappSquare />
+          </div>
         </section>
+        
         <section className={styles.services}>
-        <Image
-            src={plumber}
-            width={70}
-            height={80}
-            alt="IBMT logo"
-          />
+          <h2> Top Servives </h2>
+          <ul>
+            <li>
+              <h2>Residential Plumbing</h2>
+              <p>
+                IBMT Plumbing and Heating Technology provides full residential
+                plumbing services to the entire Lagos State and other bordering
+                States.
+              </p>
+            </li>
+            <li>
+              <h2>Commercial Plumbing</h2>
+              <p>
+                We've built our strong reputation by getting jobs done on time
+                and on budget. Emergency Plumber and HVAC Services Lagos.Do you
+                reside at Lagos or Bauchi and have an emergency plumbing problem
+                that needs to be addressed RIGHT NOW???... Call IBMT now at +234
+                816 179 1297 or 09158495082
+              </p>
+            </li>
+            <li>
+              <h2> HVAC Services</h2>
+              <p>
+                IBMT Plumbing and Heating Technology provides all kinds of
+                Heating and Cooling Services. We are excited to provide HVAC
+                services in your local area.
+              </p>
+            </li>
+            {/* <li>
+              <h2>Free Estimates</h2>
+              <p>
+                We believe in doing the job right at all time by utilizing top
+                quality industry standard products installed by highly
+                qualified, licensed plumbing professionals. We will provide you
+                with an estimate prior to starting the job.
+              </p>
+            </li> */}
+            
+            <li>
+              <h2>Client Satisfaction</h2>
+              <p>
+                At IBMT Plumbing and Heating Technology,we take our vendor
+                relationships seriously. We honour all warranties and can assist
+                you in determining whether or not your existing GeePee, Homus,
+                Karishma, Henco pipes, PPR or Coleman equipment is still under
+                warranty.
+              </p>
+            </li>
+          </ul>
         </section>
-        <section className={styles.aboutUs}></section>
         <section className={styles.testimonies}>
-          <article>
-            <div> <Image
-            src={responsive}
-            width={100}
-            height={50}
-            alt="IBMT logo"
-          /></div>
-            <div>
-              <h4>Professional Plumbers</h4>
-              <p> "Idris was awesome. Very professional and thorough when addresing our issue. He answered all of my questions and concerns. As well as leaving the area nice and clean. We would definitely use IBMT PlumbTech."</p>
-              <small> <span>Yvonne Nelson</span> - Housewife</small>
-            </div>
-          </article>
-          <article>
-            <div><Image
-            src={professional}
-            width={100}
-            height={50}
-            alt="IBMT logo"
-          /></div>
-            <div>
-              <h4> Resposive Technicians</h4>
-              <p> "Ibrahim Yahaya came out to evaluate a noisy sump pump. He explained our options clearly and changed out the poorly installed sump pump for a better model. He showed us before and after pictures and thoroughly went over what was done. We appreciate IBMT Plumbing for their great and reliable service."</p>
-              <small> <span> Idris Mustapha </span> - Federal Worker</small>
-            </div>
-          </article>
+          <h3>What Our Clients Says...</h3>
+          <ul>
+            <li>
+              <Image src={responsive} width={100} height={50} alt="IBMT logo" />
+              <div>
+                <p> <FaQuoteLeft /> Idris was awesome. Very professional and thorough when addresing our issue. He answered all of my questions and
+                concerns. As well as leaving the area nice and clean. We would
+                definitely use IBMT PlumbTech." <FaQuoteRight /> </p>
+                <small>-Yvonne Nelson</small>
+              </div>
+            </li>
+            <li>
+            <Image src={professional} width={100} height={50} alt="IBMT logo"/>
+              <div>
+                <p> <FaQuoteLeft /> Ibrahim Yahaya came out to evaluate a noisy sump pump. He
+                explained our options clearly and changed out the poorly
+                installed sump pump for a better model. He showed us before and
+                after pictures and thoroughly went over what was done. We
+                appreciate IBMT Plumbing for their great and reliable service." <FaQuoteRight />
+             </p>
+                <small> -Idris Mustapha</small>
+              </div>
+            </li>
+          </ul>
         </section>
+       
+        
         <section className={styles.faq}></section>
+        {/* <section className={styles.aboutUs}>
+          <h2> Who We Are </h2>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+          ex ut nesciunt accusamus dolorem aut praesentium ipsam harum,
+          excepturi cupiditate magnam tenetur tempora? Impedit iste dignissimos
+          minima inventore. Ducimus ab atque explicabo aliquam perferendis
+          veritatis qui. Sapiente ducimus fuga ullam est, amet excepturi neque
+          dolorum voluptatem cupiditate maiores. Ea, dolor?
+        </section> */}
         <section className={styles.contact}>
-          <h3 style={{ gridArea: "contact"}}> Contact Us</h3>
-          <div style={{ gridArea: "first"}}>
-            <input type="text" name='first' placeholder='First Name'/>
-          </div>
-          <div style={{ gridArea: "last"}}>
-            <input type="text" name='last' placeholder='Last Name'/>
-          </div>
-          <div style={{ gridArea: "phone"}}>
-            <input type="text" name='phone' placeholder='Phone Number'/>
-          </div>
-          <div style={{ gridArea: "email"}}>
-            <input type="text" name='email'  placeholder='Email Address' />
-          </div>
-          <div style={{ gridArea: "message"}}>
-          <textarea required="required" type="text" id="ContactV1Form_ITM0_Message" class="ui-cms-input" name="ContactV1Form$ITM0$Message"></textarea>
-          </div>
-          <div style={{ gridArea: "button"}} className={styles.btn}>
-            <input type="button" value="Send Message" />
-          </div>
+          <h3> Contact Us</h3>
+          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="phone" placeholder="Phone Number" />
+          <input type="text" name="email" placeholder="Email Address" />
+          <textarea
+            required="required"
+            type="text"
+            id="ContactV1Form_ITM0_Message"
+            className="ui-cms-input"
+            name="ContactV1Form$ITM0$Message"
+          ></textarea>
+          <input type="button" value="Send Message" />
+        </section>
+        <section className={styles.blog}>
+          <h3> Latest Blog ___ </h3>
+          <ul>
+            <li>
+              <Image src={icon1} alt="IBMT logo" />
+              <h4> The Importanace of Hiring Plumbers for your Plumbing Job</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                voluptate, quisquam aliquam laudantium neque voluptatum
+                architecto officia sapiente libero obcaecati recusandae at.
+                Quae, minima aliquam.
+              </p>
+              <small></small>
+            </li>
+            <li>
+              <Image src={icon} width={100} height={200} alt="IBMT logo" />
+              <h4> The Importanace of Hiring Plumbers for your Plumbing Job</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                voluptate, quisquam aliquam laudantium neque voluptatum
+                architecto officia sapiente libero obcaecati recusandae at.
+                Quae, minima aliquam.
+              </p>
+              <small></small>
+            </li>
+            <li>
+              <div>
+                <h3> Here is the List of the Top Ten Plumbers in the world </h3>
+                <small> 3 days ago    plumbing, repairs</small>
+              </div>
+              <div>
+                <h3> The Complete HIstory into the Art of Plumbing</h3>
+                <small> 3 days ago    plumbing, history</small>
+              </div>
+              <div>
+                <h3> Top Ten Plumbing Tips and Tricks</h3>
+                <small> 3 days ago    plumbing, repairs</small>
+              </div>
+            </li>
+          </ul>
         </section>
         <footer className={styles.footer}>
           <div className="logo">
-          
-          <p>  <Image
-            src={logo}
-            width={100}
-            height={50}
-            alt="IBMT logo"
-          /> IBMT Heating and Plumbing Technology, is the plumbing and HVAC company of choice, providing both residential plumbing & HVAC and commercial plumbing services 24 hours a day, seven days a week.</p>
+            <p>
+              <Image src={logo} width={100} height={50} alt="IBMT logo" /> IBMT
+              Heating and Plumbing Technology, is the plumbing and HVAC company
+              of choice, providing both residential plumbing & HVAC and
+              commercial plumbing services 24 hours a day, seven days a week.
+            </p>
           </div>
           <div className="services">
             <h3>OUR SERVICES</h3>
@@ -134,12 +231,15 @@ export default function Home() {
               <li>Commercial Services</li>
               <li>Emergency Services</li>
             </ul>
-
           </div>
           <div className="quickLinks">
             <h3>QUICK LINKS</h3>
             <nav>
-              <a href="">Home</a><a href="">Blogs</a><a href="">About Us</a><a href="">Achievements & Qualities</a><a href=""></a>
+              <a href="">Home</a>
+              <a href="">Blogs</a>
+              <a href="">About Us</a>
+              <a href="">Achievements & Qualities</a>
+              <a href=""></a>
             </nav>
           </div>
           <div className="contacts">
@@ -148,8 +248,10 @@ export default function Home() {
               <p>No 5 Adebayo Street, Pedro Road, Bariga-Lagos, Nigeria</p>
             </div>
             <div>
-              <p>Main: No 49 Amusan Street, Pupoosola Bustop, Okooba, Abule-Egba, Lagos
-Office: Abubakar Tafawa Balewa University, Bauchi</p>
+              <p>
+                Main: No 49 Amusan Street, Pupoosola Bustop, Okooba, Abule-Egba,
+                Lagos Office: Abubakar Tafawa Balewa University, Bauchi
+              </p>
             </div>
             <div>
               <p> (+234) 816 179 1297</p>
@@ -158,9 +260,8 @@ Office: Abubakar Tafawa Balewa University, Bauchi</p>
               <p>ibmtplumbingheatingtechnology@gmail.com</p>
             </div>
           </div>
-
         </footer>
       </main>
     </>
-  )
+  );
 }

@@ -1,10 +1,14 @@
+.main
+    h2, h3, h4
+        font-family: 'Times New Roman', Times, serif
 .header
+
     // margin: 5px
-    padding: 1.5rem 1rem
+    padding: 1rem 1rem
     display: flex
     justify-content: space-between
     align-items: center
-    background: lightblue
+    background: #fefefe99
 
     nav
         display: flex
@@ -15,22 +19,150 @@
 .hero
     display: flex
     justify-content: space-between
+    position: relative
+    padding: .75rem 1rem
+
+#linear
+    position: absolute
+    height: 100%
+    width: 100%
+    background: linear-gradient(90deg, white, #333)
+    opacity: .2
+    z-index: 2
+
+#heroInfo
+    position: relative
+    z-index: 3
+    margin-left: 40vw
+    text-align: left
+    line-height: 1.2
+    overflow: hidden
+
+    h2
+        color: #fff
+        padding-block: 1.5rem
+        font-size: 1.7rem
+    p
+        color: #ececec
+        font-style: italic
+        font-family: 'Times New Roman', Times, serif
+
+    ul
+        font-family: 'Times New Roman', Times, serif
+        font-style: italic
+        list-style-type: disc
+        font-size: .8rem
+
+        margin-block: .75rem
+        color: #ececec
+        padding-left: .5rem
+
+
+
+        li
+    button
+        padding: 10px 13px
+        background-color: #333
+        box-shadow: 0 0 15px #ccc
+        border: none
+        outline: none
+        border-radius: 5px
+        color: #eee
+        font-size: 1.1rem
+        font-weight: bold
+
+.whatsapp
+    padding: .25rem 1rem
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    background-color: #fefefe
+    box-shadow: inset 0 0 15px #ccccccaa
+
+    svg
+        color: green
+        min-height: 4rem
+        min-width: 4rem
 
 .services
 
+    h2
+        text-align: center
+    ul
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+        gap: 2rem
+        padding: 1rem
+        list-style-type: none
+
+        li
+            border: 1px solid white
+            padding: 1rem
+            border-radius: 1rem
+            // background: #222
+            color: #aaa
+            line-height: 1.4
+            box-shadow: 0 0 15px #00000022
+
+            h2
+                margin-bottom: .75rem
+                color: #777
 .aboutUs
+    position: relative
+    isolation: isolate
+
+    img
+        position: absolute
+        text-align: center
+        left: 2px
+
+        z-index: -1
+
+    h2
 
 .testimonies
-    display: flex
-    gap: 2rem
+    padding: 1rem
 
-    article
-        background-color: #ffffffee
-        color: #111
-        border-radius: 1rem
-        display: flex
-        gap: 1rem
-        padding: 8px 5px
+    h3
+        font-size: 1.3rem
+        margin-bottom: 1rem
+        line-height: 1.4
+        color: #333
+        border-bottom: 1px solid #999
+
+    ul
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        gap: 2rem
+
+        li
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            gap: .5rem
+            margin-bottom: 1rem
+            color: #666
+
+            div
+                // background-color: #eee
+                box-shadow: 0 0 10px 5px #00000011
+                box-shadow: inset 0 0 15px 5px #99999933
+                border-radius: 8px
+                padding: 7px 9px
+
+                p
+                    line-height: 1.2
+                    letter-spacing: .2px
+                    font-size: .9rem
+                    font-weight: normal
+
+                    span
+                        font-size: 3rem
+
+                small
+                    text-align: right
+                    text-decoration: italic
 
     div
         &:last-child
@@ -44,38 +176,82 @@
 
 .faq
 
+.blog
+    padding-inline: 1rem
+    padding-block: .5rem
+
+    ul
+        display: grid
+        gap: 1rem
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        margin-block: .5rem
+        list-style-type: none
+
+        li
+            border: 1px solid #eee
+            border-radius: 8px
+            overflow: hidden
+            line-height: 1.4
+            img
+                width: 100%
+
+            h4
+                margin-top: 1.3rem
+                font-size: 1.2rem
+                font-weight: bold
+                color: #222
+                line-height: 1
+                padding-inline: .75rem
+
+            p
+                margin-top: 1rem
+                font-size: .9rem
+                color: #666
+                padding-inline: .75rem
+
+            div
+                padding: 1rem
+                text-align: right
+
+                small
+                    text-align: right
+                    color: #999
+
+                h3
+                    text-align: left
+                    line-height: .9
+
+                &+div
+                    border-top: 1px solid #ddd
+
 .contact
-    width: min(600px, 90vw)
-    margin-inline: auto
-    margin-block: 2rem
-    display: grid
-    row-gap: 2rem
-    column-gap: 2rem
-    grid-template-areas: 'contact contact' 'first last' 'phone phone ' 'email email' 'message message' 'message message' 'button button'
+    background-color: #333
+    width: 100vw
+    padding: 1rem 1.5rem
+    display: flex
+    flex-direction: column
+    gap: 1rem
 
-    div
-        &:nth-last-child(2)
-            margin-inline: auto
+    *
+        border-radius: 5px
 
-            textarea
-                padding: .7rem .5rem    
-                min-height: 8em
-                width: min(600px, 90vw)
+    h3
+        font-size: 1.5rem
+        color: #eee
 
     input
-        font-size: .7rem
-        padding: 7px 5px
-        width: 100%
+        padding: 12px 15px
+        font-size: 1.05rem
         border: none
-        outline: none 
-        background-color: transparent
-        border-bottom: 1px solid #ccc
+        outline: none
 
-    label
-        color: #ddd
-        position: absolute
-        transform: translate( -9px, -1.5rem) scale(.7)
+    textarea
+        height: 10rem
+        border: none
+        outline: none
 
+    button
+        padding: 3px 5px
 .btn
     margin-inline: auto
     // max-width: 1rem
@@ -85,46 +261,46 @@
     border-radius: 5px
 
 .footer
-    background: #000000aa
+    background: #000000
     color: #888
     font-weight: bold
-    max-width: 700px
+    // max-width: 700px
     display: grid
     gap: 1rem
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
     padding: 1rem
+    font-size: 1.2rem
 
     div
 
         &:nth-child(2)
-            
+
             ul
                 list-style-type: circle
                 padding-left: 10px
 
                 li
-                    font-size: .6rem
+                    font-size: .9rem
                     margin-bottom: 5px
 
         &:nth-child(3)
-            background: #000
 
             nav
                 display: flex
                 flex-direction: column
-                gap: .6rem
+                gap: .8rem
 
             a
-                font-size: .6rem
+                font-size: .9rem
                 text-decoration: underline
 
     div.quickLinks
         background: red
 
     h3
-        margin-bottom: .5rem
+        margin-bottom: .7rem
         color: #fff
 
     p
-        font-size: .55em
+        font-size: .65em
         line-height: 1.25rem
